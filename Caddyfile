@@ -14,6 +14,12 @@
 }
 
 *.cerberalarms.com {
+	log {
+		hostnames firmware.{$DOMAIN}
+		output stdout
+		format json
+	}
+
 	tls {
 		key_type rsa2048
 		issuer acme {
